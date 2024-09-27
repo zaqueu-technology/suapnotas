@@ -68,7 +68,10 @@ export function zerar(){
 
 function calculoBimestral() {
   let calc = Math.round((nota1 * 2 + nota2 * 3) / 5);
-  if (calc >= 60) {
+  if(!nota1 || !nota2){
+    resultado.innerHTML = `Média = ${calc}`;
+    return;
+  }else if (calc >= 60) {
     resultado.innerHTML = `Média = ${calc} <div class="text__resultado__aprovado"><i class='bx bxs-trophy'></i>APROVADO</div>`;
   } else {
     resultado.innerHTML = `Média = ${calc} <div class="text__resultado__reprovado"><i class='bx bxs-ghost'></i>REPROVADO</div>`;
@@ -88,24 +91,23 @@ function calculoAnual() {
   }
 }
 
-function calculoNotaRestanteBimestral(k) {
+function calculoNotaRestanteBimestral() {
   const nota1Input = document.querySelector('input[data-nota="1"]');
   const nota2Input = document.querySelector('input[data-nota="2"]');
 
-  let notaTemp = k.target.dataset.nota;
-  if (notaTemp == '1') {
-    notaRestante = 0;
+  notaRestante = 0;
+  if(nota1Input.value){
     for (let i = 1; i <= 100; i++) {
       if (Math.round((nota1 * 2 + i * 3) / 5) === 60) {
         notaRestante = i;
         nota2Input.placeholder = notaRestante;
-        if (notaRestante === 100) {
-          nota1Input.placeholder = 0;
-        }
         break;
       }
     }
+  }else{
+    nota2Input.placeholder = '';
   }
+  
 }
 
 function calculoNotaRestanteAnual() {

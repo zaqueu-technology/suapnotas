@@ -1,4 +1,4 @@
-let nota1 = 0, nota2 = 0, nota3 = 0, nota4 = 0;
+export let nota1 = 0, nota2 = 0, nota3 = 0, nota4 = 0;
 const resultado = document.querySelector('.resultado');
 let notaRestante = 0;
 
@@ -54,6 +54,13 @@ function verifyLength(e) {
 
   // Log para verificar os valores
   console.log(`Nota 1: ${nota1}, Nota 2: ${nota2}, Nota 3: ${nota3}, Nota 4: ${nota4}`);
+}
+
+export function zerar(){
+  nota1 = 0;
+  nota2 = 0;
+  nota3 = 0;
+  nota4 = 0;
 }
 
 function calculoBimestral() {

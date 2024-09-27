@@ -1,6 +1,6 @@
 import { showBimestral } from "./bimestral.js";
 import { showAnual } from "./anual.js";
-import { zerar } from "./preventNumber.js";
+import { zerar, calculoAnual, calculoBimestral } from "./preventNumber.js";
 
 const bimestralButton = document.querySelector('.bimestral');
 const anualButton = document.querySelector('.anual');

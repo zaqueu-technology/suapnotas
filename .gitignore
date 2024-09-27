@@ -1,0 +1,17 @@
+# Ignorar arquivos de configuração
+*.log               # Ignora todos os arquivos .log
+*.tmp               # Ignora todos os arquivos temporários
+
+# Ignorar arquivos de ambiente
+.env                # Ignora arquivos de configuração de ambiente
+
+# Ignorar diretórios do sistema
+node_modules/      # Ignora a pasta node_modules
+dist/              # Ignora a pasta dist
+
+# Ignorar arquivos de keystore
+*.keystore         # Ignora arquivos de keystore
+
+# Ignorar arquivos de IDEs
+.idea/             # Ignora pastas do IntelliJ/WebStorm
+*.sublime-project   # Ignora arquivos de projeto do Sublime

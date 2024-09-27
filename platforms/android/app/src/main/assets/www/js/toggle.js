@@ -1,5 +1,6 @@
 import { showBimestral } from "./bimestral.js";
 import { showAnual } from "./anual.js";
+import { zerar } from "./preventNumber.js";
 
 const bimestralButton = document.querySelector('.bimestral');
 const anualButton = document.querySelector('.anual');
@@ -20,6 +21,7 @@ function verifyButton(e){
       anualButton.classList.add('item__selected');
       bimestralButton.classList.remove('item__selected');
 
+      zerar();
       showAnual();
     }
   } else if(dataType == 'bimestral'){
@@ -29,6 +31,7 @@ function verifyButton(e){
       bimestralButton.classList.add('item__selected');
       anualButton.classList.remove('item__selected');
 
+      zerar();
       showBimestral();
     }
   } 

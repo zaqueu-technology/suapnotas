@@ -25,7 +25,7 @@ function verifyLength(e) {
   }
 
   // Se o valor for maior que 100, redefine para 100
-  if (valorNumerico > 100) {
+  if (valorNumerico > 100 && input.value.slice(0,2) == '10') {
     input.value = '100'; // Substitui por '100' para manter o valor
     valorNumerico = 100; // Garante que o valor a ser usado nos cálculos seja 100
   }
@@ -74,7 +74,11 @@ function calculoBimestral() {
 
 function calculoAnual() {
   let calc = Math.round((nota1 * 2 + nota2 * 2 + nota3 * 3 + nota4 * 3) / 10);
-  if (calc >= 60) {
+
+  if(!nota1 || !nota2 || !nota3 || !nota4){
+    resultado.innerHTML = `Média = ${calc}`;
+    return;
+  }else if (calc >= 60) {
     resultado.innerHTML = `Média = ${calc} <div class="text__resultado__aprovado"><i class='bx bxs-trophy'></i>APROVADO</div>`;
   } else {
     resultado.innerHTML = `Média = ${calc} <div class="text__resultado__reprovado"><i class='bx bxs-ghost'></i>REPROVADO</div>`;
@@ -105,8 +109,22 @@ function calculoNotaRestanteAnual() {
   const nota1Input = document.querySelector('input[data-nota="1"]');
   const nota2Input = document.querySelector('input[data-nota="2"]');
   const nota3Input = document.querySelector('input[data-nota="3"]');
+  const nota4Input = document.querySelector('input[data-nota="4"]');
 
-  if (nota1Input && nota2Input && nota3Input) {
-    console.log('yessirrr');
+  if (nota1Input.value && nota2Input.value && nota3Input.value) {
+    notaRestante = 0;
+    if (Math.round((nota1 * 2 + nota2 * 2 + nota3 * 3) / 10) >= 60){
+      nota4Input.placeholder = '-1'
+      return;
+    } 
+    for (let i = 1; i <= 100; i++) {
+      if (Math.round((nota1 * 2 + nota2 * 2 + nota3 * 3 + i * 3) / 10) === 60) {
+        notaRestante = i;
+        nota4Input.placeholder = notaRestante;
+        break;
+      }
+    }
+  }else{
+    nota4Input.placeholder = '';
   }
 }

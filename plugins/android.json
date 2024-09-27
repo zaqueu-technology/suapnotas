@@ -7,10 +7,13 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-statusbar": {
+    "cordova-plugin-keyboard": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
-    "cordova-plugin-keyboard": {
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     }
   },

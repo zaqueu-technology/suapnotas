@@ -1,9 +1,11 @@
 import { showBimestral } from "./bimestral.js";
+import { showAnual } from "./anual.js";
 
 const bimestralButton = document.querySelector('.bimestral');
 const anualButton = document.querySelector('.anual');
 
 export function toggleButton(){
+  showBimestral();
   bimestralButton.addEventListener('click', verifyButton);
   anualButton.addEventListener('click', verifyButton);
 }
@@ -17,6 +19,8 @@ function verifyButton(e){
     }else{
       anualButton.classList.add('item__selected');
       bimestralButton.classList.remove('item__selected');
+
+      showAnual();
     }
   } else if(dataType == 'bimestral'){
     if(bimestralButton.classList.contains('item__selected')){

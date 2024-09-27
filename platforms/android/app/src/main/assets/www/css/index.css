@@ -30,7 +30,7 @@ body{
     font-family: 'Space Grotesk', sans-serif;
 }
 .logo{
-    width: 300px;
+    width: 200px;
 }
 
 .main{
@@ -70,7 +70,7 @@ body{
 }
 
 .notas{
-    
+    display: flex;
 }
 .notas__item__bimestral{
     display: flex;
@@ -79,6 +79,23 @@ body{
     align-items: center;
 
     width: 80%;
+}
+.notas__item__anual{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.notas__item__anual input{
+    margin: 0;
+    padding: 0;
 }
 .notas__bimestral{
     display: flex;
@@ -91,6 +108,14 @@ body{
    
 
     font-size: 2em;
+}
+.notas__anual{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .item__input{
     width: 30%; /* Define a largura automática para evitar forçar um valor fixo */
@@ -111,9 +136,13 @@ body{
 }
 .nota__title{
     display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1em;
     width: 50%;
     height: 100%;
+    text-align: center;
+    font-size: 25px;
 }
 .resultado{
     height: 10%;

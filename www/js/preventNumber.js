@@ -28,6 +28,9 @@ function verifyLength(e) {
   if (valorNumerico > 100 && input.value.slice(0,2) == '10') {
     input.value = '100'; // Substitui por '100' para manter o valor
     valorNumerico = 100; // Garante que o valor a ser usado nos cálculos seja 100
+  }else if (valorNumerico > 100){
+    input.value = input.value.slice(0,2);
+    valorNumerico = Number(input.value);
   }
 
   // Verifica e armazena o valor das notas

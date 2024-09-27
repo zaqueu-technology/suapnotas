@@ -16,9 +16,13 @@ export function giveListeners(){
 function verifyLength(e){
   const input = e.target;
 
-  if (input.value === '100') {
-    return; // Sai da função se a nota já for 100
-  }
+  let valorNumerico = Number(input.value);
+
+    // Se o valor for maior que 100, ignora a entrada e redefine para 100
+    if (valorNumerico > 100 && input.value.slice(0, 2) === '10') {
+        input.value = '100'; // Pode substituir por '' para limpar ou '100' para fixar
+        valorNumerico = 100; // Garante que o valor a ser usado nos cálculos seja 100
+    }
 
   if (input.value.length > 3) {
     input.value = input.value.slice(0, 3); // Limita o valor a 3 caracteres

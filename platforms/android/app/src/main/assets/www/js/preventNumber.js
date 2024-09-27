@@ -119,9 +119,11 @@ function calculoNotaRestanteAnual() {
   if (nota1Input.value && nota2Input.value && nota3Input.value) {
     notaRestante = 0;
     if (Math.round((nota1 * 2 + nota2 * 2 + nota3 * 3) / 10) >= 60){
-      nota4Input.placeholder = '-1'
+      nota4Input.placeholder = '-1';
       return;
-    } 
+    } else{
+      nota4Input.placeholder = 'F';
+    }
     for (let i = 1; i <= 100; i++) {
       if (Math.round((nota1 * 2 + nota2 * 2 + nota3 * 3 + i * 3) / 10) === 60) {
         notaRestante = i;

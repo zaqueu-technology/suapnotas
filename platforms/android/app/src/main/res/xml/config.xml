@@ -17,19 +17,14 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <icon density="mdpi" src="resources/android/mipmap-mdpi/ic_launcher.png" />
-    <icon density="hdpi" src="resources/android/mipmap-hdpi/ic_launcher.png" />
-    <icon density="xhdpi" src="resources/android/mipmap-xhdpi/ic_launcher.png" />
-    <icon density="xxhdpi" src="resources/android/mipmap-xxhdpi/ic_launcher.png" />
-    <icon density="xxxhdpi" src="resources/android/mipmap-xxxhdpi/ic_launcher.png" />
-    <icon src="resources/android/mipmap-anydpi-v26/ic_launcher.xml" />
+    <icon density="mdpi" src="resources/android/res/mipmap-mdpi/icon.png" target="background" />
+    <icon density="hdpi" src="resources/android/res/mipmap-hdpi/icon.png" target="background" />
+    <icon density="xhdpi" src="resources/android/res/mipmap-xhdpi/icon.png" target="background" />
+    <icon density="xxhdpi" src="resources/android/res/mipmap-xxhdpi/icon.png" target="background" />
+    <icon density="xxxhdpi" src="resources/android/res/mipmap-xxxhdpi/icon.png" target="background" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="AndroidWindowSplashScreenBackground" value="#413d65" />
-    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/android/mipmap-mdpi/ic_launcher_adaptive_fore.png" />
-    <preference name="AndroidWindowSplashScreenIcon" value="resources/android/1024.png" />
-    <preference name="AndroidWindowSplashScreenShowDuration" value="3000" />
-    <preference name="AndroidWindowSplashScreenDelay" value="2000" />
-    <preference name="FadeSplashScreen" value="true" />
-    <preference name="FadeSplashScreenDuration" value="500" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/android/res/mipmap-xxxhdpi/icon_adaptive_fore.png" />
+    <preference name="AndroidWindowSplashScreenIcon" value="resources/android/res/1024.png" />
 </widget>

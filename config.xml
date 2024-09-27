@@ -8,19 +8,23 @@
     <allow-intent href="https://*/*" />
 
     <preference name="AndroidWindowSplashScreenBackground" value="#413d65" /> <!-- Cor de fundo -->
-    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/android/mipmap-mdpi/ic_launcher_adaptive_fore.png" /> <!-- Ícone animado -->
-    <preference name="AndroidWindowSplashScreenIcon" value="resources/android/1024.png" /> <!-- Imagem de splash -->
-    <preference name="AndroidWindowSplashScreenShowDuration" value="3000" /> <!-- Duração da splash screen em milissegundos -->
-    <preference name="AndroidWindowSplashScreenDelay" value="2000" /> <!-- Atraso antes de mostrar a tela inicial -->
-    <preference name="FadeSplashScreen" value="true" /> <!-- Transição suave -->
-    <preference name="FadeSplashScreenDuration" value="500" /> <!-- Duração da transição suave -->
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/android/res/mipmap-xxxhdpi/icon_adaptive_fore.png" /> 
+    <preference name="AndroidWindowSplashScreenIcon" value="resources/android/res/1024.png" /> <!-- Imagem de splash -->
+
 
     <platform name="android">
-        <icon src="resources/android/mipmap-mdpi/ic_launcher.png" density="mdpi" />
-        <icon src="resources/android/mipmap-hdpi/ic_launcher.png" density="hdpi" />
-        <icon src="resources/android/mipmap-xhdpi/ic_launcher.png" density="xhdpi" />
-        <icon src="resources/android/mipmap-xxhdpi/ic_launcher.png" density="xxhdpi" />
-        <icon src="resources/android/mipmap-xxxhdpi/ic_launcher.png" density="xxxhdpi" />
-        <icon src="resources/android/mipmap-anydpi-v26/ic_launcher.xml" />
+        <icon src="resources/android/res/mipmap-mdpi/icon.png" density="mdpi" target="background" />
+        
+        <icon src="resources/android/res/mipmap-hdpi/icon.png" density="hdpi" target="background" />
+        
+        <icon src="resources/android/res/mipmap-xhdpi/icon.png" density="xhdpi" target="background" />
+  
+        <icon src="resources/android/res/mipmap-xxhdpi/icon.png" density="xxhdpi" target="background" />
+    
+        <icon src="resources/android/res/mipmap-xxxhdpi/icon.png" density="xxxhdpi" target="background" />
+        
+
     </platform>
+
+
 </widget>

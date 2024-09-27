@@ -11,6 +11,7 @@ dist/              # Ignora a pasta dist
 
 # Ignorar arquivos de keystore
 *.keystore         # Ignora arquivos de keystore
+my-release-key.keystore
 
 # Ignorar arquivos de IDEs
 .idea/             # Ignora pastas do IntelliJ/WebStorm

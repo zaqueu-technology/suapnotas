@@ -17,14 +17,17 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <icon density="mdpi" src="resources/android/res/mipmap-mdpi/icon.png" target="background" />
-    <icon density="hdpi" src="resources/android/res/mipmap-hdpi/icon.png" target="background" />
-    <icon density="xhdpi" src="resources/android/res/mipmap-xhdpi/icon.png" target="background" />
-    <icon density="xxhdpi" src="resources/android/res/mipmap-xxhdpi/icon.png" target="background" />
-    <icon density="xxxhdpi" src="resources/android/res/mipmap-xxxhdpi/icon.png" target="background" />
+    <icon density="mdpi" src="resources/android/res/mipmap-mdpi/icon.png" />
+    <icon density="hdpi" src="resources/android/res/mipmap-hdpi/icon.png" />
+    <icon density="xhdpi" src="resources/android/res/mipmap-xhdpi/icon.png" />
+    <icon density="xxhdpi" src="resources/android/res/mipmap-xxhdpi/icon.png" />
+    <icon density="xxxhdpi" src="resources/android/res/mipmap-xxxhdpi/icon.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="AndroidWindowSplashScreenBackground" value="#413d65" />
-    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/android/res/mipmap-xxxhdpi/icon_adaptive_fore.png" />
     <preference name="AndroidWindowSplashScreenIcon" value="resources/android/res/1024.png" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/android/res/mipmap-xxxhdpi/icon_adaptive_fore.png" />
+    <preference name="SplashScreenDelay" value="2000" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="500" />
 </widget>

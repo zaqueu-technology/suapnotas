@@ -1,4 +1,4 @@
-import { giveListeners } from "./preventNumber.js";
+import { giveListeners, calculoBimestral } from "./preventNumber.js";
 
 let notas = document.querySelector('.notas');
 
@@ -18,4 +18,5 @@ export function showBimestral(){
   `;
 
   giveListeners();
+  calculoBimestral();
 }

@@ -66,7 +66,7 @@ export function zerar(){
   nota4 = 0;
 }
 
-function calculoBimestral() {
+export function calculoBimestral() {
   let calc = Math.round((nota1 * 2 + nota2 * 3) / 5);
   if(!nota1 || !nota2){
     resultado.innerHTML = `Média = ${calc}`;
@@ -78,7 +78,7 @@ function calculoBimestral() {
   }
 }
 
-function calculoAnual() {
+export function calculoAnual() {
   let calc = Math.round((nota1 * 2 + nota2 * 2 + nota3 * 3 + nota4 * 3) / 10);
 
   if(!nota1 || !nota2 || !nota3 || !nota4){

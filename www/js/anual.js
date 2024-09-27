@@ -1,4 +1,4 @@
-import { giveListeners } from "./preventNumber.js";
+import { giveListeners, calculoAnual } from "./preventNumber.js";
 
 let notas = document.querySelector('.notas');
 
@@ -24,4 +24,5 @@ export function showAnual(){
   `;
 
   giveListeners();
+  calculoAnual();
 }

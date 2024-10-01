@@ -74,20 +74,29 @@ export function calculoBimestral() {
   }else if (calc >= 60) {
     resultado.innerHTML = `Média = ${calc} <div class="text__resultado__aprovado"><i class='bx bxs-trophy'></i>APROVADO</div>`;
   } else {
-    resultado.innerHTML = `Média = ${calc} <div class="text__resultado__reprovado"><i class='bx bxs-ghost'></i>REPROVADO</div>`;
+    resultado.innerHTML = `Média = ${calc} <div class="text__resultado__reprovado"><i class='bx bxs-ghost'></i>PROVA FINAL</div>`;
   }
 }
 
 export function calculoAnual() {
   let calc = Math.round((nota1 * 2 + nota2 * 2 + nota3 * 3 + nota4 * 3) / 10);
+  let preCalc = Math.round((nota1 * 2 + nota2 * 2 + nota3 * 3 + 100 * 3) / 10);
+
+  
+  if(nota1 && nota2 && nota3){
+    if(preCalc < 60){
+      resultado.innerHTML = `Média = ${calc} <div class="text__resultado__reprovado"><i class='bx bxs-ghost'></i>PROVA FINAL</div>`;
+      return;
+    }
+  }
 
   if(!nota1 || !nota2 || !nota3 || !nota4){
     resultado.innerHTML = `Média = ${calc}`;
     return;
-  }else if (calc >= 60) {
+  }else if(calc >= 60) {
     resultado.innerHTML = `Média = ${calc} <div class="text__resultado__aprovado"><i class='bx bxs-trophy'></i>APROVADO</div>`;
   } else {
-    resultado.innerHTML = `Média = ${calc} <div class="text__resultado__reprovado"><i class='bx bxs-ghost'></i>REPROVADO</div>`;
+    resultado.innerHTML = `Média = ${calc} <div class="text__resultado__reprovado"><i class='bx bxs-ghost'></i>PROVA FINAL</div>`;
   }
 }
 
